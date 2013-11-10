@@ -26,8 +26,8 @@
     ctx.fillStyle = this.color;
     ctx.beginPath();
 
-    var dx1 = Math.sin(this.angle) * Ship.RADIUS;
-    var dy1 = Math.cos(this.angle) * Ship.RADIUS;
+    var dx1 = Math.sin(this.angle)     * Ship.RADIUS;
+    var dy1 = Math.cos(this.angle)     * Ship.RADIUS;
     var dx2 = Math.sin(this.angle + 4) * Ship.RADIUS;
     var dy2 = Math.cos(this.angle + 4) * Ship.RADIUS;
     var dx3 = Math.sin(this.angle - 4) * Ship.RADIUS;
@@ -52,7 +52,6 @@
   Ship.prototype.resetPosition = function () {
     this.pos = [Asteroids.Game.DIM_X / 2, Asteroids.Game.DIM_Y / 2];
     this.angle = 0;
-    this.vel = [0,0];
+    this.vel = [0, 0];
   };
-
 })(this);

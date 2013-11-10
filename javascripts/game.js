@@ -21,7 +21,6 @@
     KeyboardJS.on("down",  function(){ that.ship.power(0.6) });
     KeyboardJS.on("left",  function(){ that.ship.rotate(0.3) });
     KeyboardJS.on("right", function(){ that.ship.rotate(-0.3) });
-
     KeyboardJS.on("space", function(){
       var bullet = that.ship.fireBullet();
       if (bullet) that.bullets.push(bullet);
@@ -30,8 +29,8 @@
 
   Game.prototype.addAsteroids = function (num) {
     for (var i = 0; i < num; i++) {
-      var ast = Asteroids.Asteroid.randomAsteroid(Game.DIM_X, Game.DIM_Y)
-      this.asteroids.push(ast);
+      var asteroid = Asteroids.Asteroid.randomAsteroid(Game.DIM_X, Game.DIM_Y)
+      this.asteroids.push(asteroid);
     }
   };
 
@@ -39,7 +38,6 @@
     this.ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y);
     this.ctx.drawImage(img, 0, 0);
     this.displayLevel();
-
     this.ship.draw(this.ctx);
 
     for (var i = 0; i < this.asteroids.length; i++)
@@ -91,7 +89,7 @@
   Game.prototype.removeAsteroid = function (index) {
     this.asteroids.splice(index, 1);
     if (this.asteroids.length === 0)
-      this.startNewLevel(this.level+1);
+      this.startNewLevel(this.level + 1);
   };
 
   Game.prototype.removeBullet = function (bullet) {

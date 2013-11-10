@@ -3,10 +3,9 @@
 
   var Asteroid = Asteroids.Asteroid = function (pos, vel){
     this.COLOR = "white";
-    this.RADIUS = 20;
+    this.RADIUS = 50;
     this.pos = pos;
     this.vel = vel;
-
     Asteroids.MovingObject.call(this, pos, vel, this.RADIUS, this.COLOR)
   };
 
@@ -19,16 +18,10 @@
   };
 
   Asteroid.randomVelocity = function () {
-    var randomX = Math.ceil(Math.random() * 11 - 5);
-    var randomY = Math.ceil(Math.random() * 11 - 5);
-
-    if (randomX === 0) {
-      randomX += 1;
-    }
-    if (randomY === 0) {
-      randomY += 1;
-    }
-
+    var randomX = Math.ceil(Math.random() * 20 - 5);
+    var randomY = Math.ceil(Math.random() * 20 - 5);
+    if (randomX === 0) randomX += 1;
+    if (randomY === 0) randomY += 1;
     return [randomX, randomY];
   };
 
@@ -38,10 +31,7 @@
 
     var x = (randomX > dimX * 0.25 && randomX < dimX * 0.75);
     var y = (randomY > dimY * 0.25 && randomY < dimY * 0.75);
-    if (x && y) {
-      return this.randomPosition(dimX, dimY);
-    }
+    if (x && y) return this.randomPosition(dimX, dimY);
     return [randomX, randomY];
-  }
-
+  };
 })(this);

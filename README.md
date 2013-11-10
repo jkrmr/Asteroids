@@ -19,7 +19,6 @@ Mark Pilgrim's [Dive Into HTML5](http://diveintohtml5.info) tutorial and
 Marijn Haverbeke's [Eloquent JavaScript](http://eloquentjavascript.net/contents.html) were
 great resources in creating this.
 
-Also, 
 
 ## To be implemented
 

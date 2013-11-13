@@ -1,17 +1,22 @@
 Asteroids
 =========
 
-The classic arcade game, written in plain JavaScript using HTML5 Canvas.
+### Hunt Down Maurauding Space Bubbles and Kill Them Before They Kill You!!
+
+The classic arcade game, sped up, written in plain JavaScript using HTML5 Canvas.
 
 ## Features
 
 * "Drag" (er..no drag in space...reverse thrusters?) for natural-feeling ship motion
 * Increasing number of asteroids with every new level
 * Cool starfield background
+* Shiny Space Bullets
 
 ## Dependencies
 
 Uses Thomas Fuchs's [KeyMaster](https://github.com/madrobby/keymaster) library.
+
+The game also renders much better on WebKit browsers (e.g., Safari and Google Chrome) than on Firefox.
 
 ## Acknowledgements
 

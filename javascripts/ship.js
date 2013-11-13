@@ -2,24 +2,24 @@
   var Asteroids = root.Asteroids = (root.Asteroids || {});
 
   var Ship = Asteroids.Ship = function (game) {
-    this.pos = [Asteroids.Game.DIM_X / 2, Asteroids.Game.DIM_Y / 2];
+    this.pos   = [Asteroids.Game.DIM_X / 2, Asteroids.Game.DIM_Y / 2];
     this.angle = 0;
-    this.game = game;
+    this.game  = game;
     Asteroids.MovingObject.call(this, this.pos, [0, 0], Ship.RADIUS, Ship.COLOR)
   }
 
   Ship.RADIUS = 10;
-  Ship.COLOR = "white";
+  Ship.COLOR  = "white";
 
   Ship.inherits(Asteroids.MovingObject);
 
-  Ship.prototype.power = function (impulse) {
-    this.vel[0] += Math.sin(this.angle) * impulse;
-    this.vel[1] += Math.cos(this.angle) * impulse;
-  };
-
   Ship.prototype.rotate = function (torque) {
     this.angle += torque;
+  };
+
+  Ship.prototype.power = function (impulse) {
+    this.vel[0] += (Math.sin(this.angle) * 1.5) * impulse;
+    this.vel[1] += (Math.cos(this.angle) * 1.5) * impulse;
   };
 
   Ship.prototype.draw = function (ctx) {
@@ -46,12 +46,12 @@
   Ship.prototype.fireBullet = function () {
       bulletPosn = [this.pos[0], this.pos[1]]
       speed = Math.sqrt(this.vel[0] * this.vel[0] + this.vel[1] * this.vel[1]);
-      return new Asteroids.Bullet(bulletPosn, speed + 20, this.angle, this.game);
+      return new Asteroids.Bullet(bulletPosn, speed + 30, this.angle, this.game);
   };
 
   Ship.prototype.resetPosition = function () {
-    this.pos = [Asteroids.Game.DIM_X / 2, Asteroids.Game.DIM_Y / 2];
+    this.pos   = [Asteroids.Game.DIM_X / 2, Asteroids.Game.DIM_Y / 2];
     this.angle = 0;
-    this.vel = [0, 0];
+    this.vel   = [0, 0];
   };
 })(this);

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+     -->
+
   <script src="lib/keyboard.js"></script>
   <script src="javascripts/moving_object.js"></script>
   <script src="javascripts/inherits.js"></script>
@@ -9,34 +14,44 @@
   <script src="javascripts/bullet.js"></script>
   <script src="javascripts/game.js"></script>
   <link rel="stylesheet" href="css/master.css" type="text/css" media="screen">
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Asteroids</title>
+  <meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+  <title>Asteroids!</title>
 
 </head>
 
 <body>
-  <div id="gameboard">
-    <script type="text/javascript">
-      var canvas = document.createElement("canvas");
-      canvas.setAttribute("width", Asteroids.Game.DIM_X);
-      canvas.setAttribute("height", Asteroids.Game.DIM_Y);
-      canvas.setAttribute("style", "background: transparent");
 
-      var body = document.getElementsByTagName("body")[0];
-      body.appendChild(canvas);
+  <script type="text/javascript">
+    var canvas = document.createElement("canvas");
+    canvas.setAttribute("width", Asteroids.Game.DIM_X);
+    canvas.setAttribute("height", Asteroids.Game.DIM_Y);
+    canvas.setAttribute("style", "background: transparent");
 
-      var ctx = canvas.getContext('2d');
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(canvas);
 
-      var img = new Image();
-      img.onload = function () {
-        ctx.drawImage(img, 0, 0);
-      };
-      img.src = "images/starfield.jpg";
+    var starfield = canvas.getContext('2d');
 
-      var game = new Asteroids.Game(ctx);
-      game.start();
-    </script>
+    var img = new Image();
+    img.src = "images/starfield.jpg";
+    img.onload = function () {
+      starfield.drawImage(img, 0, 0);
+    };
+
+    var game = new Asteroids.Game(starfield);
+    game.start();
+  </script>
+
+
+<!--
+  <div id="dialog" title="Game Over.">
+      <div id="game-over">game over</div>
+      <div id="invite">But don't give up! The Princess Needs You!</div>
+      <div id="aside">(What's that...? "What Princess"? How should I know?)</div>
+      <div id="continue">Press any key to continue hunting these marauding space bubbles!</div>
   </div>
+  -->
+
 </body>
 
 </html>

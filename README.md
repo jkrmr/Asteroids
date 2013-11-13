@@ -1,7 +1,7 @@
 Asteroids
 =========
 
-The classic arcade game, written in plain JavaScript using HTML5 Canvaas.
+The classic arcade game, written in plain JavaScript using HTML5 Canvas.
 
 ## Features
 
@@ -20,10 +20,9 @@ Marijn Haverbeke's [Eloquent JavaScript](http://eloquentjavascript.net/contents.
 great resources in creating this.
 
 
-## To be implemented
+## Future additions
 
 * Asteroids breaking up into smaller asteroids upon being shot
 * Asteroids created with random size
 * Asteroids created with jagged edges
-* Shiny bullets
 * Game music!

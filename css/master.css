@@ -1,7 +1,9 @@
 /* -------------------------------------------------------------------------
  *  Page and Canvas
  * ------------------------------------------------------------------------- */
-body { background-color: white; }
+body { 
+  background-color: black; 
+}
 canvas {
   display: block;
   margin: auto;

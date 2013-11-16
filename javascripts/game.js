@@ -12,7 +12,7 @@
     this.bindKeyHandlers();
   };
 
-  Game.DIM_X = 1200;
+  Game.DIM_X = 1100;
   Game.DIM_Y = 600;
   Game.FPS   = 60;
 
@@ -40,6 +40,8 @@
     this.ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y);
     this.ctx.drawImage(img, 0, 0);
     this.displayLevel();
+    this.displayShieldStrength();
+    this.displayScore();
     if (this.ship.shields <= 50) this.displayShieldStrength('red')
     this.ship.draw(this.ctx);
     for (var i = 0; i < this.asteroids.length; i++)
@@ -100,6 +102,7 @@
     else goodbye += "Better luck next time!";
 
     goodbye += "\n\nRefresh the page to start a new game.";
+
     alert(goodbye);
 
     // this.asteroids    = [];
@@ -133,15 +136,14 @@
     this.ctx.fillStyle = color;
     this.ctx.font = "bold 15px Helvetica";
     this.ctx.fillText("Level " + this.level, 10, 30);
-    this.ctx.fillText("▲ " + this.ship.shields, 10, 50);
-    this.ctx.fillText("☆ " + this.score, 10, 70);
+
   };
 
   Game.prototype.displayShieldStrength = function (color) {
     if (typeof color === 'undefined') color = 'white';
     this.ctx.fillStyle   = color;
     this.ctx.strokeStyle = color;
-    this.ctx.font        = "bold 15px Helvetica";
+    this.ctx.font        = "bold 14px Helvetica";
     this.ctx.fillText("▲ " + this.ship.shields, 10, 50);
   };
 
@@ -149,7 +151,7 @@
     if (typeof color === 'undefined') color = 'white';
     this.ctx.fillStyle   = color;
     this.ctx.strokeStyle = color;
-    this.ctx.font        = "bold 15px Helvetica";
+    this.ctx.font        = "bold 14px Helvetica";
     this.ctx.fillText("☆ " + this.score, 10, 70);
   };
 })(this);

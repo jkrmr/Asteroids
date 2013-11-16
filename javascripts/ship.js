@@ -62,7 +62,7 @@
   Ship.prototype.fireBullet = function () {
       bulletPosn = [this.pos[0], this.pos[1]]
       speed = Math.sqrt(this.vel[0] * this.vel[0] + this.vel[1] * this.vel[1]);
-      this.power(1);
+      this.power(0.5); // ship's cannon kicks a bit
       return new Asteroids.Bullet(bulletPosn, speed + 30, this.angle, this.game);
   };
 

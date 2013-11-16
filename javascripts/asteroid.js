@@ -20,8 +20,8 @@
   Asteroid.randomVelocity = function () {
     var randomX = Math.ceil(Math.random() * 25 - 5);
     var randomY = Math.ceil(Math.random() * 25 - 5);
-    if (randomX === 0) randomX += 2;
-    if (randomY === 0) randomY += 2;
+    if (randomX === 0) randomX += 10;
+    if (randomY === 0) randomY += 10;
     return [randomX, randomY];
   };
 

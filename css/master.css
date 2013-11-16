@@ -1,7 +1,9 @@
 /* -------------------------------------------------------------------------
  *  Page and Canvas
  * ------------------------------------------------------------------------- */
-body { background-color: white; }
+body {
+  background-color: black;
+}
 canvas {
   display: block;
   margin: auto;
@@ -10,40 +12,3 @@ canvas {
 /* -------------------------------------------------------------------------
  *  Game Over Dialog (jQuery UI)
  * ------------------------------------------------------------------------- */
-
-/*
-.ui-dialog-titlebar{
- display: none;
-}
-#dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 250px;
-  margin-top: -125px;
-  margin-left: -300px;
-  font-family: Helvetica, sans-serif;
-  background-color: black;
-  color: white;
-  text-align: center;
-  display: none;
-}
-#game-over{
-  font-size: 60px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  font-variant: small-caps;
-  padding: 20px 0px;
-}
-#invite{
-  font-size: 20px;
-}
-#continue{
-  padding: 40px 0px;
-  width: 300px;
-  margin: 0px auto;
-  font-size: 18px;
-}
-
-*/

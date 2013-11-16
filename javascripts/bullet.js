@@ -39,6 +39,8 @@
       if (asteroids[i].isCollidedWith(this)) {
         this.game.removeAsteroid(i);
         this.game.removeBullet(this);
+        this.game.score += 10;
+        this.game.displayScore("green");
       }
   };
 

@@ -152,5 +152,4 @@
     this.ctx.font        = "bold 15px Helvetica";
     this.ctx.fillText("☆ " + this.score, 10, 70);
   };
-
 })(this);

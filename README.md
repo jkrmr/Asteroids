@@ -1,16 +1,13 @@
 Asteroids
 =========
 
-### Hunt Down Maurauding Space Bubbles and Kill Them Before They Kill You!!
-
 The classic arcade game, sped up, written in plain JavaScript using HTML5 Canvas.
 
 ## Features
 
 * "Drag" (er..no drag in space...reverse thrusters?) for natural-feeling ship motion
 * Increasing number of asteroids with every new level
-* Cool starfield background
-* Shiny Space Bullets
+* Shiny Space Bullets™ implemented with some Canvas shadow-property trickery.
 
 ## Dependencies
 
